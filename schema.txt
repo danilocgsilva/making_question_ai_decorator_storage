@@ -1,0 +1,10 @@
+id: SERIAL PRIMARY KEY
+question: TEXT
+serialized_answer: TEXT
+result_answer: TEXT
+timestamp_start: double(22)
+timestamp_end: double(22)
+implementation_name: VARCHAR(255)
+json_answer: TEXT
+json_parameters: TEXT
+json_hardware: TEXT
