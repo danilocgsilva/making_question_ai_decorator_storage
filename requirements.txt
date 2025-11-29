@@ -1,0 +1,4 @@
+alembic
+sqlalchemy
+pymysql
+git+https://github.com/danilocgsilva/make_question_interface@main#egg=make_question_interface
