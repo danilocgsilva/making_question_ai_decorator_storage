@@ -16,3 +16,4 @@ class QuestionRecord(Base):
     json_answer = Column(Text)
     json_parameters = Column(Text)
     json_hardware = Column(Text)
+    model_name = Column(String(255))
