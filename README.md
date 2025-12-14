@@ -23,3 +23,11 @@ MYSQL_USER=... MYSQL_PASSWORD=... MYSQL_HOST=... MYSQL_PORT=... MYSQL_DATABASE=.
 ```
 
 Alternatively, you can edit the `alembic.ini` for a hardcoded connection string, but using environment variables is recommended for security and flexibility.
+
+To run migrations, first create a database.
+
+Then, ensure that the requirements packages are installed (check `requirements.txt`), then in the project root, run:
+```
+alembic upgrade head
+```
+
