@@ -1,11 +1,10 @@
 import sys
 import os
 from logging.config import fileConfig
-
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
-
 from alembic import context
+from making_question_ai_decorator_storage.DatabaseCredentials import DatabaseCredentials
 
 config = context.config
 
@@ -41,7 +40,8 @@ def run_migrations_online():
     In this scenario we need to create an Engine
     and associate a connection with the context.
     """
-    db_url = f"mysql+pymysql://{os.getenv('MYSQL_USER')}:{os.getenv('MYSQL_PASSWORD')}@{os.getenv('MYSQL_HOST')}:{os.getenv('MYSQL_PORT')}/{os.getenv('MYSQL_DATABASE')}"
+    creds = DatabaseCredentials()
+    db_url = f"mysql+pymysql://{creds.user}:{creds.password}@{creds.host}:{creds.port}/{creds.database}"
     
     configuration = config.get_section(config.config_ini_section)
     configuration['sqlalchemy.url'] = db_url
