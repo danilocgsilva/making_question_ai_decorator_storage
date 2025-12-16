@@ -16,11 +16,7 @@ SQLAlchemy is configured in `making_question_ai_decorator_storage/db.py` to conn
 
 ## Alembic Usage
 
-When running Alembic migrations, make sure the environment variables are set so that Alembic uses the correct connection string.
-
-```sh
-MYSQL_USER=... MYSQL_PASSWORD=... MYSQL_HOST=... MYSQL_PORT=... MYSQL_DATABASE=... alembic upgrade head
-```
+When running Alembic migrations, make sure the environment variables are set so that Alembic uses the correct connection string. See environment variables above.
 
 Alternatively, you can edit the `alembic.ini` for a hardcoded connection string, but using environment variables is recommended for security and flexibility.
 
